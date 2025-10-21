@@ -1,4 +1,4 @@
-# Tipsy Troll Tavern & The Hidden Hand
+# Tipsy Troll Tavern 🧌
 
 This project is an interactive, magical website with a fantasy theme. It consists of three pages:  
 
