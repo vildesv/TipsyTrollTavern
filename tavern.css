@@ -70,6 +70,27 @@ body.tavern {
 .lamp.lamp1 { top: 13.4%; left: 18.4%; }
 .lamp.lamp2 { top: 19.8%; left: 42%; }
 
+.lamp.lamp3 {  
+  top: 35.3%; 
+  left: 61.6%; 
+  width: 1.5%; 
+  height: 0.7%;       
+  background: radial-gradient(ellipse at top, #fff3b0 0%, #ffbd22 50%, transparent 100%);
+  border-radius: 50% 50% 0 0;   /* halvsirkel med lys nedover */
+  animation: flicker 1.5s infinite alternate, spark 1.2s infinite;
+}
+
+.lamp.wall-lamp {
+  top: 37.9%;
+  left: 42.3%;
+  width: 1.2%;
+  aspect-ratio: 1 / 1;
+  background: radial-gradient(circle, #fff3b0 0%, #ffbd22 60%, transparent 100%);
+  border-radius: 50%;
+  animation: flicker 1.5s infinite alternate, spark 1.2s infinite;
+}
+
+/* === FLICKER & SPARK === */
 @keyframes flicker {
   0% { opacity: 0.8; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.1); }
@@ -143,7 +164,6 @@ body.tavern {
   max-width: 80%;
   margin-bottom: 1.5rem;
 }
-
 #doorPopup button.close-btn {
   display: block;
   margin: 0 auto;
