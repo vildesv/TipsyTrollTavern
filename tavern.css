@@ -159,10 +159,11 @@ body.tavern {
   color: #2b1b17;
 }
 
-/* === DOOR POPUP JUSTERING === */
+/* === Bøttekott POPUP === */
 #doorPopup img {
   max-width: 80%;
   margin-bottom: 1.5rem;
+  filter: brightness(1.25) contrast(1.1) saturate(1.5);
 }
 #doorPopup button.close-btn {
   display: block;
@@ -215,9 +216,10 @@ body.tavern {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Papyrus', fantasy;
+  font-family: 'Georgia', serif;
   font-size: 1.5rem;
   color: #f5e6c5;
+  font-weight: bold;
   opacity: 0;
   cursor: pointer;
   pointer-events: auto; 
