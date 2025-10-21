@@ -1,0 +1,53 @@
+/* === BASIS / INDEX.HTML === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === FORSIDE / INNGANG === */
+body.entrance {
+  background: url('img/tipsy-troll-tavern.png') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cinzel Decorative', serif;
+  color: #f5e6c5;
+}
+
+.door-area {
+  position: relative;
+  width: 200px;
+  height: 150px;
+
+}
+
+.door-link {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.enter-text {
+  opacity: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f5e6c5;
+  text-shadow: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(80px);
+}
+
+.door-link:hover .enter-text {
+  opacity: 1;
+  transform: translateY(100px);
+}
+
+.door-link:hover {
+  cursor: pointer;
+}

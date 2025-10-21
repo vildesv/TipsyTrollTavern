@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Hidden Hand 🕯️</title>
+    <link rel="stylesheet" href="hiddenHand.css" />
+  </head>
+  <body class="hiddenhand">
+    <!-- BILDE MED OVERLAYS -->
+    <div class="image-wrapper">
+      <img
+        src="img/the-hidden-hand.png"
+        alt="The Hidden Hand"
+        class="hand-image"
+      />
+
+      <!-- Contact Us overlay -->
+      <div class="contact-overlay"></div>
+
+      <!-- Levende lys -->
+      <div class="lamp lamp1"></div>
+      <div class="lamp lamp2"></div>
+
+      <!-- Blå magisk kule -->
+      <div class="blue-glow"></div>
+
+      <!-- Blå magisk lys ved bordet -->
+      <div class="blue-table-light"></div>
+    </div>
+
+    <!-- NAVIGASJONS-PILER -->
+    <a href="tavern.html" class="nav-arrow left-arrow">
+      ⬅ <span class="nav-text">Go back</span>
+    </a>
+
+    <!-- POPUPS -->
+    <div id="contactPopup" class="popup">
+      <h3>📬 Contact Us</h3>
+      <p style="font-size: 0.85rem; color: #d4af37; margin-bottom: 1rem">
+        Your messages are logged in the console and stored locally in your
+        browser.
+      </p>
+      <form id="contactForm">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your name"
+          required
+          autocomplete="name"
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your email"
+          required
+          autocomplete="email"
+        />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your message"
+          required
+          autocomplete="off"
+        ></textarea>
+        <button type="submit" class="send-btn">Send</button>
+        <button type="button" class="close-btn">Close</button>
+      </form>
+    </div>
+
+    <script src="hiddenHand.js"></script>
+  </body>
+</html>

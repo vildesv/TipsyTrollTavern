@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipsy Troll Tavern 🧌</title>
+    <link rel="stylesheet" href="tavern.css" />
+  </head>
+  <body class="tavern">
+    <!-- HERO -->
+    <section class="hero">
+      <h2>Welcome, traveler!</h2>
+      <p>
+        Take a seat by the hearth and savor our finest brew. <br />
+        Cast your gaze around, and you may just stumble upon a touch of magic.
+      </p>
+    </section>
+
+    <!-- BILDE MED OVERLAYS -->
+    <div class="image-wrapper">
+      <img
+        src="img/tipsy-troll-tavern-inside.png"
+        alt="Tipsy Troll Tavern"
+        class="tavern-image"
+        usemap="#tavernmap"
+      />
+
+      <!-- Levende lys -->
+      <div class="lamp lamp1"></div>
+      <div class="lamp lamp2"></div>
+
+      <!-- Røykeffekt fra peis -->
+      <div class="smoke"></div>
+      <div
+        class="smoke"
+        style="left: 86.5%; bottom: 38%; animation-delay: 1s"
+      ></div>
+      <div
+        class="smoke"
+        style="left: 90%; bottom: 37%; animation-delay: 2s"
+      ></div>
+      <!-- Dør-overlay -->
+      <div class="door-overlay">
+        <span class="door-question">???</span>
+      </div>
+
+      <!-- About Us overlay -->
+      <div class="about-overlay"></div>
+    </div>
+
+    <map name="tavernmap">
+      <!-- Glass på bardisken -->
+      <area
+        shape="circle"
+        coords="563,607,30"
+        href="#"
+        alt="Dagens Spesial"
+        id="specialGlassBar"
+      />
+      <!-- Glass på bordet -->
+      <area
+        shape="circle"
+        coords="1217,724,30"
+        href="#"
+        alt="Dagens Spesial"
+        id="specialGlassTable"
+      />
+    </map>
+
+    <!-- NAVIGASJONS-PILER -->
+    <a href="index.html" class="nav-arrow left-arrow">
+      ⬅ <span class="nav-text">Leave tavern</span>
+    </a>
+    <a href="hiddenHand.html" class="nav-arrow right-arrow">
+      <span class="nav-text">The Hidden Hand</span> ➡
+    </a>
+
+    <!-- POPUPS -->
+    <div id="specialPopup" class="popup">
+      <h3>🍺 Today's Special</h3>
+      <img src="img/dreamweavers-delight.png" alt="Dreamweaver’s Delight" />
+      <p>
+        <strong>Dreamweaver’s Delight</strong> – a brew so silky smooth that
+        even dragons whisper goodnight and close their eyes after the very first
+        sip.<br /><br />
+        With hints of moonflower, stardust, and a pinch of unicorn mist, it
+        awakens both brave knights and clever goblins to a dreamworld filled
+        with magic and laughter. ✨
+      </p>
+      <button class="close-btn">Close</button>
+    </div>
+
+    <div id="doorPopup" class="popup">
+      <img src="img/the-goblin.png" alt="Shocked goblin" />
+      <button class="close-btn">Close</button>
+    </div>
+
+    <div id="aboutPopup" class="popup">
+      <h3>📜 About Us</h3>
+      <p>
+        The legendary <strong>Tipsy Troll Tavern</strong> has been around for
+        centuries, and it’s said that the very walls whisper ancient tales to
+        those who listen closely.<br /><br />
+        Here, you’ll find warm meals, cold drinks, and magical stories weaving
+        through every corner. Trolls, knights, and adventurers gather under our
+        roof, and the atmosphere is so enchanting that even a goblin under a
+        confusion spell easily feels at home.<br /><br />
+        Every guest leaves the tavern with a smile and a touch of magic to
+        remember! ✨
+      </p>
+      <button class="close-btn">Close</button>
+    </div>
+
+    <script src="tavern.js"></script>
+  </body>
+</html>
