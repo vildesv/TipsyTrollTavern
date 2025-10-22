@@ -243,3 +243,46 @@ body.hiddenhand {
   66% { content: "..."; opacity: 1; }
   100% { content: ""; opacity: 0.3; }
 }
+
+/* SIGARETTRØYK */
+.cigarette-smoke {
+  position: absolute;
+  top: 53.5%;    
+  left: 74.6%;   
+  width: 8px;  
+  height: 120px;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0.5;
+  background: radial-gradient(ellipse at bottom, rgba(200,200,200,0.5) 25%, rgba(200,200,200,0) 80%);
+  border-radius: 50% 50% 50% 50%; 
+  filter: blur(6px);
+  animation: smokeSwirl 5s linear infinite;
+}
+
+@keyframes smokeSwirl {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scaleX(1);
+    opacity: 0.5;
+  }
+  20% {
+    transform: translate(-4px, -20px) rotate(-5deg) scaleX(1.1);
+    opacity: 0.45;
+  }
+  40% {
+    transform: translate(3px, -40px) rotate(3deg) scaleX(1.15);
+    opacity: 0.4;
+  }
+  60% {
+    transform: translate(-5px, -60px) rotate(-4deg) scaleX(1.2);
+    opacity: 0.35;
+  }
+  80% {
+    transform: translate(4px, -80px) rotate(2deg) scaleX(1.25);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(0, -120px) rotate(0deg) scaleX(1.3);
+    opacity: 0;
+  }
+}
