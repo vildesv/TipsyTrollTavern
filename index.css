@@ -14,13 +14,16 @@ body.entrance {
   align-items: center;
   font-family: 'Cinzel Decorative', serif;
   color: #f5e6c5;
+  position: relative; /* Viktig for lysenes absolutte posisjon */
+  overflow: hidden;
 }
 
+/* === DØR OG TEKST === */
 .door-area {
   position: relative;
   width: 200px;
-  height: 150px;
-
+  height: 100px;
+  z-index: 3;
 }
 
 .door-link {
@@ -50,4 +53,52 @@ body.entrance {
 
 .door-link:hover {
   cursor: pointer;
+}
+
+/* === LYS / LANTERNE OG LAMPER === */
+.lantern, .wall-lamp, .window-light {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  animation: flicker 2s infinite alternate;
+}
+
+/* Lanterne */
+.lantern {
+  width: 60px;
+  height: 60px;
+  top: 51.5%;
+  left: 22.5%;
+  background: radial-gradient(circle, rgba(255,200,100,0.8) 0%, transparent 70%);
+}
+
+/* Vegglamper */
+.wall-lamp {
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(209, 162, 101, 0.432) 0%, transparent 70%);
+  animation: flicker 1.8s infinite alternate;
+}
+.wall-lamp.lamp1 { top: 64%; left: 51.2%; }
+.wall-lamp.lamp2 { top: 65%; left: 54.7%; }
+.wall-lamp.lamp3 { top: 66.5%; left: 58%; }
+
+/* Lys gjennom vindu */
+.window-light {
+  width: 100px;
+  height: 100px;
+  top: 46%;
+  left: 82.5%;
+  background: radial-gradient(circle, rgba(209, 162, 101, 0.432) 0%, transparent 50%);
+  animation: flicker 3s infinite alternate;
+}
+
+/* === ANIMASJON / FLIKRENDE LYS === */
+@keyframes flicker {
+  0% { opacity: 0.6; transform: scale(1); }
+  25% { opacity: 1; transform: scale(1.05); }
+  50% { opacity: 0.7; transform: scale(0.95); }
+  75% { opacity: 1; transform: scale(1.02); }
+  100% { opacity: 0.6; transform: scale(1); }
 }
