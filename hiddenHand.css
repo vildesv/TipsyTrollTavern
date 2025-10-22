@@ -141,36 +141,17 @@ body.hiddenhand {
 }
 
 @keyframes flicker {
-  0% {
-    opacity: 0.8;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-  100% {
-    opacity: 0.7;
-    transform: scale(0.9);
-  }
+  0% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0.7; transform: scale(0.9); }
 }
 
 @keyframes flameWave {
-  0% {
-    transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  }
-  25% {
-    transform: translate(-50%, -48%) scale(1.02) rotate(-1deg);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(0.98) rotate(1deg);
-  }
-  75% {
-    transform: translate(-50%, -52%) scale(1.01) rotate(-0.5deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  }
+  0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+  25% { transform: translate(-50%, -48%) scale(1.02) rotate(-1deg); }
+  50% { transform: translate(-50%, -50%) scale(0.98) rotate(1deg); }
+  75% { transform: translate(-50%, -52%) scale(1.01) rotate(-0.5deg); }
+  100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
 }
 
 /* BLÅ MAGISK KULE */
@@ -187,14 +168,8 @@ body.hiddenhand {
 }
 
 @keyframes bluePulse {
-  0% {
-    transform: translate(-50%, -50%) scale(0.8);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 1;
-  }
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
 }
 
 /* BLÅTT MAGISK LYS VED BORD */
@@ -211,12 +186,60 @@ body.hiddenhand {
 }
 
 @keyframes blueTablePulse {
-  0% {
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 0.9;
-  }
+  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.4; }
+  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.9; }
+}
+
+/* === KARAKTER OVERLAY (flere mulig) === */
+.character-overlay {
+  position: absolute;
+  width: 5%;
+  height: 10%;
+  z-index: 3;
+  cursor: pointer;
+}
+
+/* Individuelle karakterposisjoner */
+.character-overlay.one { top: 46%; left: 41%; }
+.character-overlay.two { top: 26%; left: 84%; }
+
+/* === SNAKKEBOBLE (tilpasset popup-farger, lett transparent) === */
+.speech-bubble {
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  background-color: rgba(26, 15, 13, 0.95);
+  color: #ecd8ad;
+  border: 2px solid #d4af37;
+  border-radius: 15px;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  font-family: "Georgia", serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Viser boblen ved hover */
+.character-overlay:hover .speech-bubble {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px) scale(1);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4),
+              0 0 15px rgba(255, 240, 200, 0.3);
+}
+
+/* === PULSERENDE PRIKKER (...) === */
+.speech-bubble span.dots {
+  display: inline-block;
+  animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+  0% { content: "."; opacity: 0.3; }
+  33% { content: ".."; opacity: 0.6; }
+  66% { content: "..."; opacity: 1; }
+  100% { content: ""; opacity: 0.3; }
 }
