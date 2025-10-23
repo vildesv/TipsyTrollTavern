@@ -14,16 +14,19 @@ body.entrance {
   align-items: center;
   font-family: 'Cinzel Decorative', serif;
   color: #f5e6c5;
-  position: relative; /* Viktig for lysenes absolutte posisjon */
+  position: relative;
   overflow: hidden;
 }
 
 /* === DØR OG TEKST === */
 .door-area {
-  position: relative;
+  position: absolute;
+  top: 51%;      
+  left: 46%;
   width: 200px;
   height: 100px;
   z-index: 3;
+  pointer-events: none; 
 }
 
 .door-link {
@@ -34,6 +37,7 @@ body.entrance {
   align-items: center;
   text-decoration: none;
   cursor: pointer;
+  pointer-events: none; 
 }
 
 .enter-text {
@@ -41,18 +45,16 @@ body.entrance {
   font-size: 2rem;
   font-weight: bold;
   color: #f5e6c5;
-  text-shadow: none;
+  text-shadow: 0 0 8px #000;
   transition: opacity 0.4s ease, transform 0.4s ease;
   transform: translateY(80px);
+  pointer-events: auto; 
 }
 
-.door-link:hover .enter-text {
+/* Vises kun når man hoverer over dør-området */
+.door-area:hover .enter-text {
   opacity: 1;
   transform: translateY(100px);
-}
-
-.door-link:hover {
-  cursor: pointer;
 }
 
 /* === LYS / LANTERNE OG LAMPER === */
@@ -77,7 +79,7 @@ body.entrance {
 .wall-lamp {
   width: 40px;
   height: 40px;
-  background: radial-gradient(circle, rgba(209, 162, 101, 0.432) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(209,162,101,0.432) 0%, transparent 70%);
   animation: flicker 1.8s infinite alternate;
 }
 .wall-lamp.lamp1 { top: 64%; left: 51.2%; }
@@ -90,7 +92,7 @@ body.entrance {
   height: 100px;
   top: 46%;
   left: 82.5%;
-  background: radial-gradient(circle, rgba(209, 162, 101, 0.432) 0%, transparent 50%);
+  background: radial-gradient(circle, rgba(209,162,101,0.432) 0%, transparent 50%);
   animation: flicker 3s infinite alternate;
 }
 
@@ -101,4 +103,60 @@ body.entrance {
   50% { opacity: 0.7; transform: scale(0.95); }
   75% { opacity: 1; transform: scale(1.02); }
   100% { opacity: 0.6; transform: scale(1); }
+}
+
+/* === BOBLER VED ØLGLASSET === */
+.beer-bubbles {
+  position: absolute;
+  top: 10.5%;
+  left: 39.3%;
+  width: 70px; 
+  height: 120px; 
+  overflow: visible;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.beer-bubbles span {
+  position: absolute;
+  bottom: 0;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, rgba(188,140,74,0.5) 50%, rgba(41,29,9,0.3) 80%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: realisticBubbles 4s infinite ease-in;
+  filter: blur(0.3px);
+}
+
+/* Færre bobler med variasjon */
+.beer-bubbles span:nth-child(1) { left: 15%; animation-delay: 0s; animation-duration: 3.8s; transform: scale(0.8); }
+.beer-bubbles span:nth-child(2) { left: 35%; animation-delay: 0.7s; animation-duration: 4.2s; transform: scale(0.9); }
+.beer-bubbles span:nth-child(3) { left: 50%; animation-delay: 1.4s; animation-duration: 3.5s; transform: scale(0.7); }
+.beer-bubbles span:nth-child(4) { left: 25%; animation-delay: 2s; animation-duration: 4.5s; transform: scale(1); }
+.beer-bubbles span:nth-child(5) { left: 45%; animation-delay: 2.5s; animation-duration: 3.8s; transform: scale(0.6); }
+
+/* === ANIMASJON – naturlig bevegelse === */
+@keyframes realisticBubbles {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.7);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9; 
+  }
+  30% {
+    transform: translateY(-30px) translateX(-3px);
+  }
+  50% {
+    transform: translateY(-60px) translateX(2px);
+  }
+  70% {
+    transform: translateY(-90px) translateX(-1px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-130px) translateX(1px) scale(1);
+    opacity: 0;
+  }
 }
