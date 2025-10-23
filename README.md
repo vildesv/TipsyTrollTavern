@@ -1,6 +1,6 @@
 # 🧌 Tipsy Troll Tavern
 
-Welcome to **Tipsy Troll Tavern**, a magical, interactive website that immerses you in a whimsical fantasy world. Explore the tavern’s exterior, step inside for warm lights and cozy vibes, or sneak into the mysterious backroom… if you dare! ✨
+Welcome to **Tipsy Troll Tavern**, a magical, interactive website that immerses you in a whimsical fantasy world. Explore the tavern’s exterior, step inside for warm lights and cozy vibes, or sneak into the mysterious backroom… ✨
 
 ---
 
