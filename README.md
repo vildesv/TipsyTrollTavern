@@ -14,8 +14,8 @@ The website has **three enchanting pages**, each with unique visuals, effects, a
 - **🎵 Music:** [Ambient-music by giangallegos](https://freesound.org/s/812170/) – Creative Commons 0  
 
 ### 2️⃣ Tavern Interior (`tavern.html`)  
-- **✨ Description:** The cozy interior with flickering lamps, magical smoke, and glowing details.  
-- **🖱️ Interactivity:** Click on elements to reveal **Today’s Special** and **About Us** info.  
+- **✨ Description:** The cozy interior with flickering lamps, magical smoke, and popups.  
+- **🖱️ Interactivity:** Click on elements to reveal **Today’s Special** and **About Us** info. Who knows, you might even reveal something else...  
 - **🎵 Music:** [My Tavern 1.wav by ralexpdx](https://freesound.org/s/321220/) – Attribution 4.0  
 
 ### 3️⃣ Backroom (`hiddenHand.html`)  
@@ -35,9 +35,8 @@ The website has **three enchanting pages**, each with unique visuals, effects, a
 
 ## ✨ Features
 
-- **Magical animations**: flickering lights, smoke, and rising bubbles.  
+- **Magical animations**: flickering lights, glow, smoke, and rising bubbles.  
 - **Ambient music**: each page has its own theme track, with mute/unmute controls.  
-- **Responsive design**: optimized for different screen sizes.  
 - **Interactive elements**: clickable popups, hover effects, and local storage messaging.  
 
 ---
