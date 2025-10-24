@@ -54,7 +54,26 @@ const characters = [
       Those who rush through the halls find only echoes, while the careful observer discerns what others overlook. <br /><br />
     `,
   },
+  {
+    overlay: document.querySelector(".character-overlay.three"),
+    popupId: "infoPopup3",  
+    text: `
+    Heh, heh… you’ve got the look of someone who fancies a little <em>risk</em>. <br /><br />
+    Name’s Gribz. Cards, dice, coins — if it clinks or flips, I’ve probably lost and won it twice. 
+    Luck? Bah! Luck’s just the name fools give to skill they don’t understand. <br /><br />
+    Every hand’s a story, every shuffle a chance to rewrite it. 
+    The trick isn’t knowing when to play your cards — it’s making others believe you’ve already won. <br /><br />
+    `,
+  },
 ];
+
+// Hjelpefunksjon for å lukke alle popups
+function closeAllCharacterPopups() {
+  characters.forEach(c => {
+    const popup = document.getElementById(c.popupId);
+    if (popup) popup.style.display = "none";
+  });
+}
 
 characters.forEach((char) => {
   // Opprett popup dynamisk hvis den ikke finnes
@@ -73,6 +92,7 @@ characters.forEach((char) => {
   const closeBtn = popup.querySelector(".close-btn");
 
   char.overlay.addEventListener("click", () => {
+    closeAllCharacterPopups();  // Lukk alle før vi åpner denne
     popup.style.display = "block";
   });
 

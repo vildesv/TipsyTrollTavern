@@ -95,3 +95,70 @@ muteBtn.addEventListener('click', () => {
   bgAudio.muted = isMuted;
   muteBtn.textContent = isMuted ? '🔇' : '🔊';
 });
+
+// === Dialog mellom Traveler og Witch ===
+const dialogSequence = [
+  { 
+    traveler: "Greetings… I heard whispers of Princess Pixelia's visit here.", 
+    witch: "Ah… the princess, yes. Rumor says she indulged a bit too much of the Giggling Goblin Grog…" 
+  },
+  { 
+    traveler: "Really? I hope she left without trouble.", 
+    witch: "Trouble? Ha! She proclaimed our tavern 'terribly outdated!' after her… spirited visit." 
+  },
+  { 
+    traveler: "Terribly outdated? The Tipsy Troll Tavern? Legends would shiver at such a claim!", 
+    witch: "Indeed. Even magic can’t shield a place from the eyes of a restless princess." 
+  },
+  { 
+    traveler: "Then she wants us to adapt… perhaps a new digital home?", 
+    witch: "Aye… she desires our tales and laughter to echo in the digital age, or vanish like mist." 
+  },
+  { 
+    traveler: "I see… secrets, spirits, and spells… all need a modern stage.", 
+    witch: "Exactly. And only the curious and brave will uncover what lingers beyond the ale and shadows." 
+  },
+  { 
+    traveler: "Very well, I will heed your words… and find Princess Pixelia’s trail.", 
+    witch: "Go, traveler… and remember, the tavern’s magic is subtle, yet ever watching." 
+  }
+];
+
+const traveler = document.querySelector(".character-overlay.traveler");
+const witch = document.querySelector(".character-overlay.witch");
+
+const travelerBubble = traveler.querySelector(".speech-bubble");
+const witchBubble = witch.querySelector(".speech-bubble");
+
+let currentStep = 0;
+
+const showDialog = (speaker) => {
+  // Sett melding for begge karakterer basert på step
+  travelerBubble.innerHTML = dialogSequence[currentStep].traveler;
+  witchBubble.innerHTML = dialogSequence[currentStep].witch;
+
+  // Vis boblene
+  travelerBubble.style.opacity = 1;
+  witchBubble.style.opacity = 1;
+
+  // Oppdater step kun når karakteren som snakker klikkes
+  currentStep = (currentStep + 1) % dialogSequence.length;
+};
+
+// Klikk på Traveler
+traveler.addEventListener("click", (e) => {
+  e.stopPropagation();
+  showDialog("traveler");
+});
+
+// Klikk på Witch
+witch.addEventListener("click", (e) => {
+  e.stopPropagation();
+  showDialog("witch");
+});
+
+// Klikk andre steder lukker boblene
+document.addEventListener("click", () => {
+  travelerBubble.style.opacity = 0;
+  witchBubble.style.opacity = 0;
+});

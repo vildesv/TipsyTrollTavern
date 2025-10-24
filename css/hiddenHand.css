@@ -202,6 +202,7 @@ body.hiddenhand {
 /* Individuelle karakterposisjoner */
 .character-overlay.one { top: 46%; left: 41%; }
 .character-overlay.two { top: 26%; left: 84%; }
+.character-overlay.three { top: 62%; left: 5%; }
 
 /* === SNAKKEBOBLE (tilpasset popup-farger, lett transparent) === */
 .speech-bubble {
