@@ -10,12 +10,12 @@ The website has **three enchanting pages**, each with unique visuals, effects, a
 
 ### 1️⃣ Homepage (`index.html`)  
 - **✨ Description:** The exterior of the tavern, featuring flickering lanterns, glowing window light, and bubbles rising from the tavern’s sign.  
-- **🖱️ Interactivity:** Hover over the door to reveal the “Enter tavern” text.  
+- **🖱️ Interactivity:** Hover over the door to reveal the “Enter tavern” text. And if you look closely, you might even reveal something else...  
 - **🎵 Music:** [Ambient-music by giangallegos](https://freesound.org/s/812170/) – Creative Commons 0  
 
 ### 2️⃣ Tavern Interior (`tavern.html`)  
 - **✨ Description:** The cozy interior with flickering lamps, magical smoke, and popups.  
-- **🖱️ Interactivity:** Click on elements to reveal **Today’s Special** and **About Us** info. Who knows, you might even reveal something else...  
+- **🖱️ Interactivity:** Click on elements to reveal popups and dialogue. 
 - **🎵 Music:** [My Tavern 1.wav by ralexpdx](https://freesound.org/s/321220/) – Attribution 4.0  
 
 ### 3️⃣ Backroom (`hiddenHand.html`)  
