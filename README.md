@@ -15,7 +15,7 @@ The website has **three enchanting pages**, each with unique visuals, effects, a
 
 ### 2️⃣ Tavern Interior (`tavern.html`)  
 - **✨ Description:** The cozy interior with flickering lamps, magical smoke, and popups.  
-- **🖱️ Interactivity:** Click on elements to reveal popups and dialogue. 
+- **🖱️ Interactivity:** Click on elements or characters to reveal popups and dialogue. 
 - **🎵 Music:** [My Tavern 1.wav by ralexpdx](https://freesound.org/s/321220/) – Attribution 4.0  
 
 ### 3️⃣ Backroom (`hiddenHand.html`)  
