@@ -70,6 +70,17 @@ bottleOverlay.addEventListener('click', () => {
   new Audio('audio/glass-clink.mp3').play();
 });
 
+// Troll popup
+const trollOverlay = document.querySelector(".character-overlay.troll");
+const trollPopup = document.getElementById("trollPopup");
+
+trollOverlay.addEventListener("click", (e) => {
+  e.stopPropagation();
+  closeAllPopups();
+  disableMap();
+  trollPopup.style.display = "block";
+});
+
 // === LUKK-KNAPPER ===
 closeButtons.forEach(btn => {
   btn.addEventListener('click', e => {
