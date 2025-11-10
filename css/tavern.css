@@ -1,11 +1,11 @@
-/* === BASIS === */
+/* BASIS / TAVERN.HTML */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* === BODY === */
+/* BODY */
 body.tavern {
   font-family: 'Georgia', serif;
   color: #ecd8ad;
@@ -16,14 +16,14 @@ body.tavern {
   background-color: #2b1b17;
 }
 
-/* === IMAGE WRAPPER === */
+/* IMAGE WRAPPER */
 .image-wrapper {
   position: relative;
   width: 100%;
   height: auto;
 }
 
-/* === IMAGE === */
+/* TAVERN-IMAGE */
 .tavern-image {
   display: block;
   width: 100%;
@@ -33,7 +33,7 @@ body.tavern {
   z-index: 1;
 }
 
-/* === HERO === */
+/* HERO */
 .hero {
   position: absolute;
   top: 5%;
@@ -55,7 +55,7 @@ body.tavern {
   white-space: normal;
 }
 
-/* === LEVENDE LYS & GNISTER === */
+/* LEVENDE LYS & GNISTER */
 .lamp {
   position: absolute;
   width: 2%;
@@ -76,7 +76,7 @@ body.tavern {
   width: 1.5%; 
   height: 0.7%;       
   background: radial-gradient(ellipse at top, #fff3b0 0%, #ffbd22 50%, transparent 100%);
-  border-radius: 50% 50% 0 0;   /* halvsirkel med lys nedover */
+  border-radius: 50% 50% 0 0; 
   animation: flicker 1.5s infinite alternate, spark 1.2s infinite;
 }
 
@@ -90,7 +90,7 @@ body.tavern {
   animation: flicker 1.5s infinite alternate, spark 1.2s infinite;
 }
 
-/* === FLICKER & SPARK === */
+/* FLICKER & SPARK */
 @keyframes flicker {
   0% { opacity: 0.8; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.1); }
@@ -102,7 +102,7 @@ body.tavern {
   50% { box-shadow: 0 0 8px #ffbd22, 0 0 12px #fff3b0; }
 }
 
-/* === RØYK FRA PEIS === */
+/* RØYK FRA PEIS */
 .smoke {
   position: absolute;
   bottom: 36.5%;
@@ -125,7 +125,7 @@ body.tavern {
   100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
 }
 
-/* === POPUPS === */
+/* POPUPS */
 .popup {
   position: absolute;
   top: 55%;
@@ -159,7 +159,7 @@ body.tavern {
   color: #2b1b17;
 }
 
-/* === Bøttekott POPUP === */
+/* BØTTEKOTT-POPUP */
 #doorPopup img {
   max-width: 80%;
   margin-bottom: 1.5rem;
@@ -170,7 +170,7 @@ body.tavern {
   margin: 0 auto;
 }
 
-/* === NAVIGASJON === */
+/* NAVIGASJON */
 .nav-arrow {
   position: absolute;
   top: 50%;
@@ -201,7 +201,7 @@ body.tavern {
 .image-wrapper:hover .right-arrow { opacity: 0.2; }
 .nav-arrow:hover { opacity: 1; transform: translateY(-50%) scale(1.1); }
 
-/* === DØR OVERLAY === */
+/* DØR-OVERLAY */
 .door-overlay {
   position: absolute;
   top: 33%;
@@ -227,7 +227,7 @@ body.tavern {
 }
 .door-overlay:hover .door-question { opacity: 1; }
 
-/* === ABOUT US OVERLAY === */
+/* OM OSS-OVERLAY */
 .about-overlay {
   position: absolute;
   top: 15%;
@@ -239,7 +239,7 @@ body.tavern {
   pointer-events: auto;
 }
 
-/* === MUTE / UNMUTE KNAPP === */
+/* MUTE / UNMUTE KNAPP */
 .mute-btn {
   position: fixed;
   top: 20px;
@@ -260,7 +260,7 @@ body.tavern {
   transform: scale(1.1);
 }
 
-/* === CHARACTER OVERLAYS === */
+/* KARAKTER OVERLAYS */
 .character-overlay {
   position: absolute;
   width: 5%;
@@ -273,7 +273,7 @@ body.tavern {
 .character-overlay.traveler { top: 45%; left: 53.5%; }
 .character-overlay.witch { top: 50%; left: 77%; }
 
-/* === SPEECH BUBBLE === */
+/* SNAKKEBOBLE */
 .speech-bubble {
   position: absolute;
   bottom: 130%;
@@ -324,7 +324,7 @@ body.tavern {
               0 0 15px rgba(255, 240, 200, 0.3);
 }
 
-/* === BOTTLE OVERLAY === */
+/* FLASKE-OVERLAY */
 .bottle-overlay {
   position: absolute;
   top: 31%;       

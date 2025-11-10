@@ -1,11 +1,11 @@
-/* === BASIS / INDEX.HTML === */
+/* BASIS / INDEX.HTML */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* === FORSIDE / INNGANG === */
+/* FORSIDE / INNGANG */
 body.entrance {
   background: url('../img/tipsy-troll-tavern.png') center/cover no-repeat;
   height: 100vh;
@@ -18,7 +18,7 @@ body.entrance {
   overflow: hidden;
 }
 
-/* === DØR OG TEKST === */
+/* DØR OG TEKST */
 .door-area {
   position: absolute;
   top: 51%;      
@@ -57,7 +57,7 @@ body.entrance {
   transform: translateY(100px);
 }
 
-/* === LYS / LANTERNE OG LAMPER === */
+/* LYS / LANTERNE OG LAMPER */
 .lantern, .wall-lamp, .window-light {
   position: absolute;
   border-radius: 50%;
@@ -96,7 +96,7 @@ body.entrance {
   animation: flicker 3s infinite alternate;
 }
 
-/* === ANIMASJON / FLIKRENDE LYS === */
+/* ANIMASJON / FLIKRENDE LYS */
 @keyframes flicker {
   0% { opacity: 0.6; transform: scale(1); }
   25% { opacity: 1; transform: scale(1.05); }
@@ -105,7 +105,7 @@ body.entrance {
   100% { opacity: 0.6; transform: scale(1); }
 }
 
-/* === BOBLER VED ØLGLASSET === */
+/* BOBLER VED ØLGLASSET */
 .beer-bubbles {
   position: absolute;
   top: 10.5%;
@@ -136,7 +136,7 @@ body.entrance {
 .beer-bubbles span:nth-child(4) { left: 25%; animation-delay: 2s; animation-duration: 4.5s; transform: scale(1); }
 .beer-bubbles span:nth-child(5) { left: 45%; animation-delay: 2.5s; animation-duration: 3.8s; transform: scale(0.6); }
 
-/* === ANIMASJON – naturlig bevegelse === */
+/* ANIMASJON – naturlig bevegelse */
 @keyframes realisticBubbles {
   0% {
     transform: translateY(0) translateX(0) scale(0.7);
@@ -162,16 +162,16 @@ body.entrance {
 }
 
 .invisible-footer {
-  position: absolute; /* Eller fixed hvis du vil at den alltid ligger i bunn */
+  position: absolute; 
   bottom: 0;
   width: 100%;
   margin-left: 30px;
-  height: 30px; /* Høyden du ønsker */
-  opacity: 0.3; /* Usynlig */
-  pointer-events: none; /* Sørger for at den ikke blokkerer klikk */
+  height: 30px; 
+  opacity: 0.3; 
+  pointer-events: none;
 }
 
-/* === MUTE / UNMUTE KNAPP === */
+/* MUTE / UNMUTE KNAPP */
 .mute-btn {
   position: fixed;
   top: 20px;
@@ -192,7 +192,7 @@ body.entrance {
   transform: scale(1.1);
 }
 
-/* === Hemmelig område med "Oh?"-tekst på hover === */
+/* Hemmelig område med "Oh?"-tekst på hover */
 #secret-spot {
   position: absolute;
   top: 69%;
@@ -223,7 +223,7 @@ body.entrance {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
-/* === Popup med video === */
+/* Popup med video */
 #video-popup {
   position: fixed;
   inset: 0;
@@ -232,7 +232,7 @@ body.entrance {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  padding: 2%; /* liten margin rundt videoen */
+  padding: 2%; 
 }
 
 #video-popup.hidden {
@@ -241,9 +241,9 @@ body.entrance {
 
 .popup-content {
   position: relative;
-  width: 90vw;      /* 90% av vinduets bredde */
-  max-width: 1400px; /* maks bredde på store skjermer */
-  aspect-ratio: 16 / 9; /* beholder videoformatet */
+  width: 90vw;     
+  max-width: 1400px; 
+  aspect-ratio: 16 / 9; 
 }
 
 .popup-content iframe {

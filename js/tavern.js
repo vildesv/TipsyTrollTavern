@@ -1,8 +1,8 @@
 // Hent popup-elementer
 const specialPopup = document.getElementById('specialPopup');
-const doorPopup = document.getElementById('doorPopup');
+const doorPopup = document.getElementById('doorPopup'); 
 const aboutPopup = document.getElementById('aboutPopup');
-const bottlePopup = document.getElementById('bottlePopup'); // Ny popup
+const bottlePopup = document.getElementById('bottlePopup');
 
 // Hent close-knapper
 const closeButtons = document.querySelectorAll('.close-btn');
@@ -15,7 +15,7 @@ function closeAllPopups() {
   specialPopup.style.display = 'none';
   doorPopup.style.display = 'none';
   aboutPopup.style.display = 'none';
-  bottlePopup.style.display = 'none'; // Steng flaskepopup
+  bottlePopup.style.display = 'none'; 
   enableMap();
 }
 
@@ -27,7 +27,7 @@ function enableMap() {
   areaElements.forEach(area => (area.style.pointerEvents = 'auto'));
 }
 
-// === GLASS ===
+// GLASS
 document.getElementById('specialGlassBar').addEventListener('click', e => {
   e.preventDefault();
   closeAllPopups();
@@ -43,7 +43,7 @@ document.getElementById('specialGlassTable').addEventListener('click', e => {
   new Audio('audio/glass-clink.mp3').play();
 });
 
-// === DØR ===
+// DØR 
 const doorQuestion = document.querySelector('.door-question');
 doorQuestion.addEventListener('click', () => {
   closeAllPopups();
@@ -52,7 +52,7 @@ doorQuestion.addEventListener('click', () => {
   new Audio('audio/door-creak.mp3').play();
 });
 
-// === ABOUT US ===
+// OM OSS OVERLAY
 const aboutOverlay = document.querySelector('.about-overlay');
 aboutOverlay.addEventListener('click', () => {
   closeAllPopups();
@@ -61,7 +61,7 @@ aboutOverlay.addEventListener('click', () => {
   new Audio('audio/book-open.mp3').play();
 });
 
-// === BOTTLE OVERLAY ===
+// FLASKE OVERLAY
 const bottleOverlay = document.querySelector('.bottle-overlay');
 bottleOverlay.addEventListener('click', () => {
   closeAllPopups();
@@ -70,7 +70,7 @@ bottleOverlay.addEventListener('click', () => {
   new Audio('audio/glass-clink.mp3').play();
 });
 
-// Troll popup
+// TROLL-POPUP
 const trollOverlay = document.querySelector(".character-overlay.troll");
 const trollPopup = document.getElementById("trollPopup");
 
@@ -81,7 +81,7 @@ trollOverlay.addEventListener("click", (e) => {
   trollPopup.style.display = "block";
 });
 
-// === LUKK-KNAPPER ===
+// LUKK-KNAPPER
 closeButtons.forEach(btn => {
   btn.addEventListener('click', e => {
     e.target.parentElement.style.display = 'none';
@@ -89,7 +89,7 @@ closeButtons.forEach(btn => {
   });
 });
 
-// === BAKGRUNNSLYD ===
+// BAKGRUNNSLYD
 const bgAudio = new Audio('audio/my-tavern-1.wav'); // endre per side
 bgAudio.loop = true;
 bgAudio.volume = 0.3;
@@ -105,7 +105,7 @@ function startAudio() {
 document.addEventListener('click', startAudio, { once: true });
 document.addEventListener('keydown', startAudio, { once: true });
 
-// === MUTE / UNMUTE-KNAPP ===
+// MUTE / UNMUTE-KNAPP
 const muteBtn = document.createElement('button');
 muteBtn.classList.add('mute-btn');
 muteBtn.textContent = '🔊';
@@ -118,7 +118,7 @@ muteBtn.addEventListener('click', () => {
   muteBtn.textContent = isMuted ? '🔇' : '🔊';
 });
 
-// === Dialog mellom Traveler og Witch med turbasert svar ===
+// Dialog mellom Traveler og Witch
 const dialogSequence = [
   { speaker: "traveler", text: "Greetings… I heard whispers of Princess Pixelia's visit here." },
   { speaker: "witch", text: "Ah… the princess, yes. Rumor says she indulged a bit too much of the Giggling Goblin Grog…" },
@@ -141,7 +141,7 @@ const witchBubble = witch.querySelector(".speech-bubble");
 
 let currentStep = 0;
 
-// Oppdater bobler basert på tur
+// Oppdater bobler basert på tur i dialogen 
 function showDialogue(step) {
   const current = dialogSequence[step];
 

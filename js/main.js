@@ -1,4 +1,4 @@
-// === BAKGRUNNSLYD ===
+// BAKGRUNNSLYD
 const bgAudio = new Audio('audio/ambient-music.mp3'); // endre per side
 bgAudio.loop = true;
 bgAudio.volume = 0.3;
@@ -14,7 +14,7 @@ function startAudio() {
 document.addEventListener('click', startAudio, { once: true });
 document.addEventListener('keydown', startAudio, { once: true });
 
-// === MUTE / UNMUTE-KNAPP ===
+// MUTE / UNMUTE-KNAPP 
 const muteBtn = document.createElement('button');
 muteBtn.classList.add('mute-btn');
 muteBtn.textContent = '🔊';
@@ -27,7 +27,7 @@ muteBtn.addEventListener('click', () => {
   muteBtn.textContent = isMuted ? '🔇' : '🔊';
 });
 
-// === EASTER EGG MED "OH?" TEKST ===
+// EASTER EGG MED "OH?" TEKST 
 document.addEventListener("DOMContentLoaded", () => {
   const secretSpot = document.getElementById("secret-spot");
   const ohText = document.getElementById("oh-text");
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // === Hjelpefunksjon for å lukke popup ===
+  // Hjelpefunksjon for å lukke popup
   function closePopup(previousMuteState = false) {
     popup.classList.add("hidden");
     videoFrame.src = "";

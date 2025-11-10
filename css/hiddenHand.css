@@ -1,11 +1,11 @@
-/* === BASIS === */
+/* BASIS / HIDDENHAND.HTML*/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* === BODY === */
+/* BODY */
 body.hiddenhand {
   font-family: "Georgia", serif;
   color: #ecd8ad;
@@ -16,7 +16,7 @@ body.hiddenhand {
   background-color: #1a0f0d;
 }
 
-/* === IMAGE WRAPPER === */
+/* IMAGE WRAPPER */
 .image-wrapper {
   position: relative;
   width: 100%;
@@ -24,7 +24,7 @@ body.hiddenhand {
   overflow: hidden;
 }
 
-/* === IMAGE === */
+/* IMAGE */
 .hand-image {
   display: block;
   width: 100%;
@@ -35,7 +35,7 @@ body.hiddenhand {
   filter: brightness(1.2) contrast(1.2) saturate(1.8);
 }
 
-/* === NAVIGASJON === */
+/* NAVIGASJON */
 .nav-arrow {
   position: absolute;
   top: 50%;
@@ -63,7 +63,7 @@ body.hiddenhand {
   transform: translateY(-50%) scale(1.1);
 }
 
-/* === POPUPS === */
+/* POPUPS */
 .popup {
   position: absolute;
   top: 55%;
@@ -109,7 +109,7 @@ body.hiddenhand {
   color: #1a0f0d;
 }
 
-/* === CONTACT OVERLAY === */
+/* KONTAKT-OVERLAY */
 .contact-overlay {
   position: absolute;
   top: 30%;
@@ -120,7 +120,7 @@ body.hiddenhand {
   z-index: 3;
 }
 
-/* === LEVENDE LYS (OVALE MED BØLGENDE BEVEGELSE) === */
+/* LEVENDE LYS (STEARINLYS) */
 .lamp {
   position: absolute;
   width: 0.5%;
@@ -190,7 +190,7 @@ body.hiddenhand {
   100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.9; }
 }
 
-/* === KARAKTER OVERLAY (flere mulig) === */
+/* KARAKTER-OVERLAY */
 .character-overlay {
   position: absolute;
   width: 5%;
@@ -204,7 +204,7 @@ body.hiddenhand {
 .character-overlay.two { top: 26%; left: 84%; }
 .character-overlay.three { top: 62%; left: 5%; }
 
-/* === SNAKKEBOBLE (tilpasset popup-farger, lett transparent) === */
+/* SNAKKEBOBLE */
 .speech-bubble {
   position: absolute;
   bottom: 130%;
@@ -232,7 +232,7 @@ body.hiddenhand {
               0 0 15px rgba(255, 240, 200, 0.3);
 }
 
-/* === PULSERENDE PRIKKER (...) === */
+/* PULSERENDE PRIKKER (...) */
 .speech-bubble span.dots {
   display: inline-block;
   animation: dots 1.5s infinite;
@@ -288,7 +288,7 @@ body.hiddenhand {
   }
 }
 
-/* === MUTE / UNMUTE KNAPP === */
+/* MUTE / UNMUTE KNAPP */
 .mute-btn {
   position: fixed;
   top: 20px;

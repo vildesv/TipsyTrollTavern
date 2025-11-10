@@ -1,4 +1,4 @@
-// === CONTACT POPUP ===
+// KONTAKT POPUP
 const contactPopup = document.getElementById("contactPopup");
 const contactForm = document.getElementById("contactForm");
 const contactOverlay = document.querySelector(".contact-overlay");
@@ -32,7 +32,7 @@ contactForm.addEventListener("submit", (e) => {
   contactPopup.style.display = "none";
 });
 
-// === CHARACTER POPUPS ===
+// KARAKTER POPUPS
 const characters = [
   {
     overlay: document.querySelector(".character-overlay.one"),
@@ -101,7 +101,7 @@ characters.forEach((char) => {
   });
 });
 
-// === BAKGRUNNSLYD ===
+// BAKGRUNNSLYD
 const bgAudio = new Audio('audio/pirate-tavern.wav'); // endre per side
 bgAudio.loop = true;
 bgAudio.volume = 0.3;
@@ -117,7 +117,7 @@ function startAudio() {
 document.addEventListener('click', startAudio, { once: true });
 document.addEventListener('keydown', startAudio, { once: true });
 
-// === MUTE / UNMUTE-KNAPP ===
+// MUTE / UNMUTE-KNAPP 
 const muteBtn = document.createElement('button');
 muteBtn.classList.add('mute-btn');
 muteBtn.textContent = '🔊';
