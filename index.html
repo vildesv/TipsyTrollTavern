@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="no">
   <head>
     <meta charset="UTF-8" />
@@ -36,10 +36,24 @@
     </footer>
 
     <!-- Hemmelig trigger-område -->
-<div id="secret-spot">
-  <div id="oh-text">Oh?</div>
-</div>
+    <div id="secret-spot">
+      <div id="oh-text">Oh?</div>
+    </div>
 
+    <!-- Popups for hotspots -->
+    <div id="hotspot-popup" class="hotspot-popup hidden"></div>
+
+    <!-- Hotspots -->
+    <div
+      class="hotspot barrel"
+      data-hover="A barrel… yet something seems wrong."
+      data-click="You peeked inside. Still just a barrel."
+    ></div>
+
+    <div
+      class="hotspot troll"
+      data-hover="Through the door… secrets whisper to those who listen."
+    ></div>
 
     <!-- Popup for video -->
     <div id="video-popup" class="hidden">
@@ -51,12 +65,18 @@
           src=""
           title="YouTube video player"
           frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+          "
           allowfullscreen
         ></iframe>
       </div>
     </div>
-
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -81,4 +81,49 @@ document.addEventListener("DOMContentLoaded", () => {
     bgAudio.muted = previousMuteState;
     muteBtn.textContent = previousMuteState ? '🔇' : '🔊';
   }
+
+  // HOTSPOT INTERAKSJON
+const hotspotPopup = document.getElementById('hotspot-popup');
+const hotspots = document.querySelectorAll('.hotspot');
+let activeHotspot = null;
+
+hotspots.forEach(spot => {
+  // Hover → vis hover-tekst uansett
+  spot.addEventListener('mouseenter', () => {
+    hotspotPopup.textContent = spot.dataset.hover;
+
+    const rect = spot.getBoundingClientRect();
+    hotspotPopup.style.left = `${rect.left + rect.width / 2 + window.scrollX}px`;
+    hotspotPopup.style.top = `${rect.top - 70 + window.scrollY}px`; // over hotspot
+    hotspotPopup.classList.add('show');
+  });
+
+  spot.addEventListener('mouseleave', () => {
+    // Skjul kun hvis click-tekst ikke vises
+    if (activeHotspot !== spot) {
+      hotspotPopup.classList.remove('show');
+    }
+  });
+
+  // Klikk → vis click-tekst
+  spot.addEventListener('click', e => {
+    e.stopPropagation();
+    if (!spot.dataset.click) return; // hopp over hvis ingen click-tekst
+
+    hotspotPopup.textContent = spot.dataset.click;
+    const rect = spot.getBoundingClientRect();
+    hotspotPopup.style.left = `${rect.left + rect.width / 2 + window.scrollX}px`;
+    hotspotPopup.style.top = `${rect.top - 70 + window.scrollY}px`;
+    hotspotPopup.classList.add('show');
+    activeHotspot = spot;
+  });
+});
+
+// Klikk utenfor → skjul popup
+document.addEventListener('click', e => {
+  if (!e.target.classList.contains('hotspot')) {
+    hotspotPopup.classList.remove('show');
+    activeHotspot = null;
+  }
+});
 });
