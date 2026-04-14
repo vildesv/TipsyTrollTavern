@@ -127,3 +127,14 @@ document.addEventListener('click', e => {
   }
 });
 });
+
+// const villagePath = document.querySelector(".path-to-village");
+// const forestPath = document.querySelector(".path-to-forest");
+
+// villagePath.addEventListener("click", function () {
+//   window.location.href = "village.html";
+// });
+
+// forestPath.addEventListener("click", function () {
+//   window.location.href = "forest.html";
+// });

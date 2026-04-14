@@ -312,3 +312,71 @@ body.fade-out {
   height: 175px;
   background: rgba(255,0,0,0); /* sett til 0.3 for debug */
 }
+
+/* .nav-arrow {
+  position: absolute;
+  text-decoration: none;
+  color: #f5e6c5;
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 0 0 6px #000;
+  opacity: 0.3;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.nav-arrow {
+  opacity: 0.15;
+}
+
+.nav-arrow:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+body.entrance:hover .nav-arrow {
+  opacity: 0.3;
+} */
+
+/* NAVIGASJON */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #f5e6c5;
+  opacity: 0;
+  text-decoration: none;
+  z-index: 4;
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-text {
+  font-family: 'Papyrus', fantasy;
+  font-size: 1rem;
+  color: #f5e6c5;
+  margin: 0 0.5rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+.nav-arrow:hover .nav-text { opacity: 1; color: #f5e6c5; }
+.left-arrow { left: 2%; }
+.right-arrow { right: 2%; }
+.image-wrapper:hover .left-arrow,
+.image-wrapper:hover .right-arrow { opacity: 0.2; }
+.nav-arrow:hover { opacity: 1; transform: translateY(-50%) scale(1.1); }
+
+/* Village (høyre side) */
+.village-arrow {
+  top: 60%;
+  right: 5%;
+}
+
+/* Forest (venstre side) */
+.forest-arrow {
+  top: 70%;
+  left: 5%;
+}
