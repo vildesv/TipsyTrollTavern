@@ -1,5 +1,5 @@
 // BAKGRUNNSLYD
-const bgAudio = new Audio('audio/ambient-music.mp3'); // endre per side
+const bgAudio = new Audio('audio/alex_jauk-calm-nature-sounds-196258.mp3'); // endre per side
 bgAudio.loop = true;
 bgAudio.volume = 0.3;
 
